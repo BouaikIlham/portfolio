@@ -1,14 +1,27 @@
-
+import { BrowserRouter } from 'react-router-dom'
+import {About, Contact, Experience, Feedbacks, Hero, Navbar, StarsCanvas, Tech, Works, } from './components'
 import './App.css'
 
 function App() {
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">
-          Hello me
-      </h1>
-    </div>
+    <BrowserRouter>
+      <div className="relative 2-0 bg-primary">
+        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+        <Navbar />
+        <Hero />
+        </div>
+        <About />
+        <Experience />
+        <Tech />
+        <Works />
+        <Feedbacks />
+        <div className="relative 2-0">
+          <Contact />
+          <StarsCanvas />
+        </div>
+      </div>
+    </BrowserRouter>
   )
 }
 
